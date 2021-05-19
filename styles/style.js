@@ -11,5 +11,8 @@ export const gStyle = StyleSheet.create({
         color: '#333',
         fontFamily: 'mt-light',
         textAlign: 'center'
+    },
+    fontTitle: {
+        paddingTop: 20
     }
 })

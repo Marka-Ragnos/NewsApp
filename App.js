@@ -4,6 +4,7 @@ import { gStyle } from './styles/style';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import Main from './components/Main';
+import About from './components//About';
 
 const fonts = () => Font.loadAsync({
   'mt-bold': require('./assets/fonts/Montserrat-Bold.ttf'),
