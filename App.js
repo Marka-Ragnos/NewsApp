@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
-import { StyleSheet } from 'react-native';
-import { gStyle } from './styles/style';
-import * as Font from 'expo-font';
-import AppLoading from 'expo-app-loading';
-import Main from './components/Main';
-import About from './components//About';
+import React, { useState } from "react";
+import { StyleSheet } from "react-native";
+import * as Font from "expo-font";
+import AppLoading from "expo-app-loading";
+import MainStack from "./navigate";
 
-const fonts = () => Font.loadAsync({
-  'mt-bold': require('./assets/fonts/Montserrat-Bold.ttf'),
-  'mt-light': require('./assets/fonts/Montserrat-Light.ttf')
-});
+const fonts = () =>
+  Font.loadAsync({
+    "mt-bold": require("./assets/fonts/Montserrat-Bold.ttf"),
+    "mt-light": require("./assets/fonts/Montserrat-Light.ttf"),
+  });
 
 export default function App() {
   const [font, setFont] = useState(false);
 
-  if(font) {
-    return (
-      <Main />
-    );
+  if (font) {
+    return <MainStack />;
   } else {
     return (
       <AppLoading
@@ -29,6 +26,4 @@ export default function App() {
   }
 }
 
-const styles = StyleSheet.create({
-
-});
+const styles = StyleSheet.create({});
